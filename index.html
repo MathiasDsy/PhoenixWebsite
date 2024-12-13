@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phoenix - Groupe de musique</title>
+  <link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="main-nav-bar">
+        <a href="#">Bienvenue</a>
+        <a href="#timeline">Histoire</a>
+        <a href="#albums">Discographie</a>
+        <a href="#membres">Membres</a>
+    </div>
+  <!-- Section 1: Introduction -->
+  <section class="hero">
+    <h1>Bienvenue dans l'univers de Phoenix</h1>
+    <p>Explorez l'histoire, la musique et les moments forts du groupe indie pop légendaire.</p>
+    <a href="#timeline">En apprendre plus !</a>
+  </section>
+
+  <!-- Section 2: Histoire -->
+  <section id="timeline" class="timeline">
+    <div id="nav-bar-histoire">
+        <a href="#timeline-page-1">1</a>
+        <a href="#timeline-page-2">2</a>
+        <a href="#timeline-page-3">3</a>
+    </div>
+    <div id="timeline-style-container">
+        
+        <div class="trait">
+            <div class="event" style="--left:0%; --top:1"> 
+                <p><span style="color: rgb(255, 131, 131); font-weight: bold;">1995 </span> - Création du groupe</p>
+            </div>
+            <div class="boule" style="--left:0%">
+            </div>
+            <div class="event" style="--left:20%; --top:-1"> 
+                <p><span style="color: rgb(255, 131, 131); font-weight: bold;">2000 </span> - Premier album <i>Phoenix</i></p>
+            </div>
+            <div class="boule" style="--left:20%">
+            </div>
+            <div class="event" style="--left:40%; --top:1"> 
+                <p><span style="color: rgb(255, 131, 131); font-weight: bold;">2004 </span> - <i>Alphabetical</i></p>
+            </div>
+            <div class="boule" style="--left:40%">
+
+            </div>
+            <div class="event" style="--left:60%; --top:-1"> 
+                <p><span style="color: rgb(255, 131, 131); font-weight: bold;">2005 </span> -  Concert à Coachella, premier grand pas sur la scène internationale</p>
+            </div>
+            <div class="boule" style="--left:60%">
+
+            </div>
+            <div class="event" style="--left:85%; --top:1"> 
+                <p><span style="color: rgb(255, 131, 131); font-weight: bold;">2009  </span> - <i>Wolfgang Amadeus Phoenix</i>, succès mondial et Grammy Award.</p>
+            </div>
+            <div class="boule" style="--left:85%">
+
+            </div>
+            <div class="event" style="--left:100%; --top:-1"> 
+                <p><span style="color: rgb(255, 131, 131); font-weight: bold;">2024 </span> - Cérémonie de cloture des Jeux Olympiques en France</p>
+            </div>
+            <div class="boule" style="--left:100%">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="timeline-page-1" class="timeline-page" style="--left:0%">
+        <div id="timeline-page1-container">
+            <h1>L'Histoire de Phoenix</h1>
+            <h3>Phoenix, c’est l’histoire d’un groupe qui a su transformer ses racines versaillaises en un phénomène musical mondial, mélangeant audace et mélodie avec une signature unique</h3>
+        </div>
+    </div>
+    <div id="timeline-page-2" class="timeline-page" style="--left:33%">
+    </div>
+    <div id="timeline-page-3" class="timeline-page" style="--left:66%">
+    </div>
+  </section>
+
+  <!-- Section 3: Albums -->
+  <section id="albums" class="albums">
+    <h1>Discographie</h1>
+    <p>Explorez leur différents albums !</p>
+    <div class="slider" style="
+        --width: 150px;
+        --height: 150px;
+        --quantity: 8;
+    ">
+        <div class="list">
+            <div class="item" style="--position : 1"><img id="bankrupt-album" src="assets/bankrupt.jpg" alt=""></div>
+            <div class="item" style="--position : 2"><img id="alphabetical-album" src="assets/Alphabetical.jpg" alt=""></div>
+            <div class="item" style="--position : 3"><img id="ti-amo-album" src="assets/ti_amo.jpeg" alt=""></div>
+            <div class="item" style="--position : 4"><img id="its-never-been-like-that-album" src="assets/its_never_been_like_that.jpg" alt=""></div>
+            <div class="item" style="--position : 5"><img id="alpha-zulu-album" src="assets/alpha_zulu.jpeg" alt=""></div>
+            <div class="item" style="--position : 6"><img id="wolfgang-amadeus-remix-album" src="assets/wolfgang-amadeus-remix.jpeg" alt=""></div>
+            <div class="item" style="--position : 7"><img id="wolfgang-amadeus-album" src="assets/wolfgang-amadeus.jpg" alt=""></div>
+            <div class="item" style="--position : 8"><img id="united-album"src="assets/united.jpg" alt=""></div>
+        </div>
+        
+        
+    </div>
+    <div id="currently-playing">
+    
+        <p>Actuellement entrain de jouer : </p>
+        <div id="currently-playing-anim">
+            <img id="currently-playing-img" src="assets/united.jpg" alt="">
+            <div id="currently-playing-disk"></div>
+        </div>
+        <input type="range" id="audio-slider" value="100" min="0" max="100" step="1">
+    </div>
+    <audio id="audio-controls">
+        <source id="audio-source" src="musiques/after-midnight.wav"></source>
+    </audio>
+  </section>
+
+  <!-- Section 4: Style et Clips -->
+  <section id="membres" class="style">
+    <h1>Membres</h1>
+    <h3>Explorez les différents membres du groupe !</h3>
+    <div class="membres">
+        <div class="membre">
+            <img src="assets/Thomas_Mars.jpg">
+            <p>Thomas Mars</p>
+        </div>
+        <div class="membre">
+            <img src="assets/laurent-brancowitz.jpg">
+            <p>Laurent Brancowitz</p>
+        </div>
+        <div class="membre">
+            <img src="assets/deck_darcy.jpg">
+            <p>Deck Darcy</p>
+        </div>
+        <div class="membre">
+            <img src="assets/robin_coudert.jpg">
+            <p>Robin Coudert</p>
+        </div>
+        <div class="membre">
+            <img src="assets/thomas-hedlund-1.webp">
+            <p>Thomas Hedlund</p>
+        </div>
+        <div class="membre">
+            <img src="assets/Christian_Mazzalai.jpg">
+            <p>Christian Mazzalai</p>
+        </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Concerts -->
+
+
+  <!-- Section 6: Footer -->
+  <section class="footer">
+    <h1>Merci de votre visite !</h1>
+    <p>Suivez Phoenix sur <a href="https://www.instagram.com/wearephoenix" target="_blank">Instagram</a> et <a href="https://open.spotify.com/artist/5LfGQac0EIXyAN8aUwmNAQ" target="_blank">Spotify</a>.</p>
+  </section>
+  <script src="js/index.js"></script>
+
+</body>
+</html>

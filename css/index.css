@@ -1,0 +1,314 @@
+* {
+scroll-behavior: smooth;
+}
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+color: #333;
+overflow-x: hidden;
+text-shadow: #000 2px 2px 2px ;
+}
+
+
+#timeline-page-1 {
+    text-shadow: #ffe0b2 1px 1px 2px;
+}
+
+#main-nav-bar {
+    width: 0px;
+    height: 0px;
+    position: sticky;
+    top: 50%;
+    left: 10px;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    flex-direction: column;
+    font-size: 1rem;
+    background-color: #000;
+}
+
+
+section {
+    height: 100vh;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.hero {
+    background: url('../assets/hero.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.timeline{
+    background: url("../assets/hero2.jpg") no-repeat center center/cover;
+    width: 300vw;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    position: relative;
+    background-color: rgba(255,255,255,0.6);
+}
+
+
+
+#timeline-style-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.trait {
+    width: 50%;
+    height: 5px;
+    background-color: white;
+    position: relative;
+    box-shadow: #000 2px 2px 2px;
+}
+
+.boule {
+    position: absolute;
+    background-color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    top: -14px;
+    left: var(--left);
+    transition: 0.3s all;
+    z-index: 101;
+    box-shadow: #000 2px 2px 2px;
+}
+
+#albums {
+    text-shadow: none;
+}
+
+#currently-playing {
+    text-shadow: none;
+}
+
+.event {
+    color: white;
+    text-shadow: #000 2px 2px 2px;
+    position: absolute;
+    top: calc(-10vh * var(--top));
+    left: var(--left);
+    width: 20vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.timeline-page {
+    position: absolute;
+    top: 0;
+    left: var(--left);
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+}
+
+
+#nav-bar-histoire {
+    position: sticky   ;
+    top: 90%;
+    left: 50%;
+    width: 100px;
+    background-color: #000;
+    z-index: 100;
+}
+
+.boule:hover {
+    transform: scale(1.5);
+    transition: 0.3s all;
+    cursor: pointer;
+    background-color: rgb(252, 125, 125);
+    box-shadow: #000 2px;
+}
+
+.albums {
+    background: #e0f7fa;
+}
+
+.style {
+    background: #ffe0b2;
+}
+
+.membres {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.membre {
+    height: 100%;
+    width: 25%;
+    position: relative;
+}
+
+.membre img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: 0.3s
+}
+
+.membre p {
+    color: whitesmoke;
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    left: 0%;
+    right: 40%
+}
+
+.membre:hover img{
+    z-index: 2;
+    height: 100%;
+    width: 150%;
+    object-fit: cover;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.membre:not(:hover) {
+    opacity: 0.5; /* Réduit l'opacité des autres membres */
+  }
+
+.concerts {
+    background: #c8e6c9;
+}
+
+.footer {
+    background: #333;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+
+.albums img {
+    width: 150px;
+}
+
+a {
+    color: #ffa000;
+    text-decoration: none;
+}
+
+/* Tuto de Lun dev code : https://www.youtube.com/watch?v=mF9yOwlunWk&ab_channel=LunDev */
+.slider {
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000,
+        transparent
+    );
+}
+
+
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+
+.slider .list .item {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    animation-delay: calc((10s/var(--quantity)) * (var(--position) - 1));
+    transition: filter 0.5s;
+}
+
+.slider .list .item img {
+    width: 100%;
+    cursor: pointer;
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    } to {
+        left: calc(var(--width) * -1);
+    }
+}
+
+.slider:hover .item {
+    animation-play-state: paused;
+    filter: grayscale(1);
+}
+
+.slider .item:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+.albums p {
+    margin-bottom: 50px;
+}
+
+
+#currently-playing {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#currently-playing img{
+    border-radius: 50%;
+    animation: cdRotating 10s linear infinite;
+}
+
+#currently-playing-anim {
+    width: 60%;
+    height: 70%;
+    position: relative;
+}
+
+#currently-playing-disk {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #333;
+    position: absolute;
+    top: 59px;
+    left: 59px;
+}
+
+@keyframes cdRotating {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
